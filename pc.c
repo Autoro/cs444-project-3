@@ -84,6 +84,8 @@ void* produce(void* arg)
         sem_post(c_sem);
     }
 
+    printf("P%d: exiting\n", id);
+
     return NULL;
 }
 
