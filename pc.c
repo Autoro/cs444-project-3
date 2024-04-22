@@ -122,7 +122,7 @@ int main(int argc, char** argv)
 {
     if (argc < 5)
     {
-        printf("Usage: %s <producer count> <consumer count> <event count> <max events>", argv[0]);
+        printf("Usage: %s <producer count> <consumer count> <event count> <max events>\n", argv[0]);
         exit(1);
     }
 
@@ -182,7 +182,7 @@ int main(int argc, char** argv)
     free(consumer_args);
 
     eventbuf_free(buffer);
-    
+
     sem_close(p_sem);
     sem_close(c_sem);
     sem_close(buf_sem);
